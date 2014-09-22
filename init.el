@@ -2,7 +2,7 @@
 (define-key global-map "\C-h" 'delete-backward-char)
 (define-key global-map "\M-?" 'help-for-help)
 
-;; blak highlight
+;; blank highlight
 (defface my-face-b-1 '((t (:background "NavajoWhite4"))) nil)
 (defface my-face-b-2 '((t (:background "gray10"))) nil)
 (defface my-face-u-1 '((t (:background "SteelBlue" :underline t))) nil)

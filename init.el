@@ -20,9 +20,29 @@
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
 
+;; current line highlight
+(defface hlline-face
+  '((((class color)
+      (background dark))
+     (:background "dark slate gray"))
+    (((class color)
+      (background light))
+     (:background  "#808080"))
+    (t
+     ()))
+  "*Face used by hl-line.")
+(setq hl-line-face 'hlline-face)
+(global-hl-line-mode)
+
 ;; ruby
 (autoload 'ruby-mode "ruby-mode"
   "Mode for editing ruby source files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+
+;; color
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'molokai t)
+(add-to-list 'default-frame-alist '(alpha . 80))
+(set-frame-parameter nil 'alpha 80)

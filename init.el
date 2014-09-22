@@ -26,9 +26,3 @@
 (add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-
-;; color theme
-(add-to-list 'custom-theme-load-path
-  (file-name-as-directory "~/.emacs.d/themes/"))
-(load-theme 'hober t)
-(enable-theme 'hober)

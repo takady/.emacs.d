@@ -35,8 +35,8 @@
       ;; molokai palette
       (molokai-white          "#ffffff")
       (molokai-fg             "#f8f8f0")
-      (molokai-red            "#990000")
-      (molokai-pink           "#f92672")
+      (molokai-red            "#ff0000")
+      (molokai-pink           "#990000")
       (molokai-orange+5       "#ef5939")
       (molokai-orange         "#fd971f")
       (molokai-yellow         "#ffff00")
@@ -54,7 +54,7 @@
       (molokai-blue           "#66d9ef")
       (molokai-slateblue      "#7070f0")
       (molokai-purple         "#ae81ff")
-      (molokai-palevioletred  "#000000")
+      (molokai-palevioletred  "#d33682")
       (molokai-grey-2         "#bcbcbc")
       (molokai-grey-1         "#8f8f8f")
       (molokai-grey           "#808080")
@@ -63,19 +63,21 @@
       (molokai-grey+5         "#232526")
       (molokai-bg             "#1b1d1e")
       (molokai-grey+10        "#080808")
-      (molokai-dark           "#990000")
+      (molokai-dark           "#000000")
       (molokai-base01         "#465457")
       (molokai-base02         "#455354")
       (molokai-base03         "#293739")
       (molokai-dodgerblue     "#13354a"))
-  (custom-theme-set-faces
+ (custom-theme-set-faces
    'molokai
 
    ;; base
    `(default ((t (:foreground ,molokai-fg))))
-   `(cursor ((t (:foreground ,molokai-bg))))
+   `(cursor ((t (:background ,molokai-fg :foreground ,molokai-bg))))
    `(fringe ((t (:foreground ,molokai-base02 :background ,molokai-bg))))
-   `(region ((t :inverse-video t)))
+   `(highlight ((t (:background ,molokai-grey))))
+   `(region ((t (:background  ,molokai-grey+2))
+             (t :inverse-video t)))
    `(warning ((t (:foreground ,molokai-palevioletred :weight bold))))
 
    ;; font lock
@@ -97,9 +99,11 @@
 
    ;; mode line
    `(mode-line ((t (:foreground ,molokai-fg
+                                :background ,molokai-base03
                                 :box nil))))
    `(mode-line-buffer-id ((t (:weight bold))))
    `(mode-line-inactive ((t (:foreground ,molokai-fg
+                                         :background ,molokai-base02
                                          :box nil))))
 
    ;; search

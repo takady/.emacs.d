@@ -36,7 +36,7 @@
       (molokai-white          "#ffffff")
       (molokai-fg             "#f8f8f0")
       (molokai-red            "#ff0000")
-      (molokai-pink           "#990000")
+      (molokai-pink           "#cc0000")
       (molokai-orange+5       "#ef5939")
       (molokai-orange         "#fd971f")
       (molokai-yellow         "#ffff00")

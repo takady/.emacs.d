@@ -2,6 +2,11 @@
 (define-key global-map "\C-h" 'delete-backward-char)
 (define-key global-map "\M-?" 'help-for-help)
 
+;; pacage repos: MELPA
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+
 ;; blank highlight
 (defface my-face-b-1 '((t (:background "NavajoWhite4"))) nil)
 (defface my-face-b-2 '((t (:background "gray10"))) nil)
@@ -46,3 +51,9 @@
 (load-theme 'molokai t)
 (add-to-list 'default-frame-alist '(alpha . 80))
 (set-frame-parameter nil 'alpha 80)
+
+;; anything
+(require 'anything-startup)
+(global-set-key (kbd "C-x b") 'anything-for-files)
+(global-set-key (kbd "C-x C-y") 'anything-show-kill-ring)
+(global-set-key (kbd "C-x M-x") 'anything-M-x)

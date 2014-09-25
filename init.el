@@ -1,6 +1,7 @@
 (setq make-backup-files nil)
 (define-key global-map "\C-h" 'delete-backward-char)
 (define-key global-map "\M-?" 'help-for-help)
+(define-key global-map "\C-r" 'revert-buffer)
 (show-paren-mode t)
 
 ;; pacage repos: MELPA

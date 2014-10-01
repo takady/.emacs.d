@@ -41,18 +41,22 @@
 (global-hl-line-mode)
 
 ;; ruby
+(setq ruby-insert-encoding-magic-comment nil)
 (autoload 'ruby-mode "ruby-mode"
   "Mode for editing ruby source files" t)
-(add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 
 ;; color
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'molokai t)
-(add-to-list 'default-frame-alist '(alpha . 80))
-(set-frame-parameter nil 'alpha 80)
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;;(load-theme 'molokai t)
+;;(add-to-list 'default-frame-alist '(alpha . 80))
+;;(set-frame-parameter nil 'alpha 80)
 
 ;; anything
 (require 'anything-startup)

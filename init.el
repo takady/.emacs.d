@@ -2,6 +2,8 @@
 (define-key global-map "\C-h" 'delete-backward-char)
 (define-key global-map "\M-?" 'help-for-help)
 (define-key global-map "\C-r" 'revert-buffer)
+(define-key global-map "\C-z" 'advertised-undo)
+(define-key global-map "\M-s" 'replace-string)
 (show-paren-mode t)
 
 ;; pacage repos: MELPA
@@ -44,6 +46,7 @@
 (add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 
 ;; color
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")

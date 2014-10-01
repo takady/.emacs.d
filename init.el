@@ -52,12 +52,6 @@
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 
-;; color
-;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;;(load-theme 'molokai t)
-;;(add-to-list 'default-frame-alist '(alpha . 80))
-;;(set-frame-parameter nil 'alpha 80)
-
 ;; anything
 (require 'anything-startup)
 (global-set-key (kbd "C-x b") 'anything-for-files)

@@ -4,6 +4,7 @@
 (define-key global-map "\C-r" 'revert-buffer)
 (define-key global-map "\C-z" 'advertised-undo)
 (define-key global-map "\M-s" 'replace-string)
+(setq scroll-step 1)
 (show-paren-mode t)
 
 ;; pacage repos: MELPA

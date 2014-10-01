@@ -1,7 +1,6 @@
 (setq make-backup-files nil)
 (define-key global-map "\C-h" 'delete-backward-char)
 (define-key global-map "\M-?" 'help-for-help)
-(define-key global-map "\C-r" 'revert-buffer)
 (define-key global-map "\C-z" 'advertised-undo)
 (define-key global-map "\M-s" 'replace-string)
 (setq scroll-step 1)
@@ -62,3 +61,16 @@
 ;; auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
+
+;; reload
+(defun revert-buffer-no-confirm (&optional force-reverting)
+  (interactive "P")
+  ;;(message "force-reverting value is %s" force-reverting)
+  (if (or force-reverting (not (buffer-modified-p)))
+      (revert-buffer :ignore-auto :noconfirm)
+    (error "The buffer has been modified")))
+
+(global-set-key (kbd "\C-r") 'revert-buffer-no-confirm)

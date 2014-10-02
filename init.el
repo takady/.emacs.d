@@ -42,8 +42,7 @@
 
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
-(autoload 'ruby-mode "ruby-mode"
-  "Mode for editing ruby source files" t)
+(autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))

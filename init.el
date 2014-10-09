@@ -1,4 +1,7 @@
+(menu-bar-mode 0)
+(tool-bar-mode 0)
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 (define-key global-map "\C-h" 'delete-backward-char)
 (define-key global-map "\M-?" 'help-for-help)
 (define-key global-map "\C-z" 'advertised-undo)

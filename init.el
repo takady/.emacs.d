@@ -54,6 +54,9 @@
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 
+;; haml
+(require 'haml-mode)
+
 ;; anything
 (require 'anything-startup)
 (global-set-key (kbd "C-x b") 'anything-for-files)

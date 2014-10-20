@@ -57,6 +57,9 @@
 ;; haml
 (require 'haml-mode)
 
+;; yaml
+(require 'yaml-mode)
+
 ;; anything
 (require 'anything-startup)
 (global-set-key (kbd "C-x b") 'anything-for-files)

@@ -87,3 +87,8 @@
     (error "The buffer has been modified")))
 
 (global-set-key (kbd "\C-r") 'revert-buffer-no-confirm)
+
+;; cua
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+(define-key global-map "\C-\\" 'cua-set-rectangle-mark)

@@ -2,10 +2,10 @@
 (tool-bar-mode 0)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
-(define-key global-map "\C-h" 'delete-backward-char)
-(define-key global-map "\M-?" 'help-for-help)
-(define-key global-map "\C-z" 'advertised-undo)
-(define-key global-map "\M-s" 'replace-string)
+(global-set-key (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "C-z") 'advertised-undo)
+(global-set-key (kbd "M-?") 'help-for-help)
+(global-set-key (kbd "M-s") 'replace-string)
 (setq scroll-step 1)
 (show-paren-mode t)
 (put 'set-goal-column 'disabled nil)
@@ -55,6 +55,13 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(require 'ruby-electric nil t)
+(require 'ruby-block nil t)
+(setq ruby-block-highlight-toggle t)
+(defun ruby-mode-hooks ()
+  (ruby-electric-mode t)
+  (ruby-block-mode t))
+(add-hook 'ruby-mode-hook 'ruby-mode-hooks)
 
 ;; php
 (require 'php-mode)
@@ -75,23 +82,21 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (setq ac-use-menu-map t)
-(define-key ac-menu-map "\C-n" 'ac-next)
-(define-key ac-menu-map "\C-p" 'ac-previous)
+(define-key ac-menu-map "C-n" 'ac-next)
+(define-key ac-menu-map "C-p" 'ac-previous)
 
 ;; reload
 (defun revert-buffer-no-confirm (&optional force-reverting)
   (interactive "P")
-  ;;(message "force-reverting value is %s" force-reverting)
   (if (or force-reverting (not (buffer-modified-p)))
       (revert-buffer :ignore-auto :noconfirm)
     (error "The buffer has been modified")))
-
-(global-set-key (kbd "\C-r") 'revert-buffer-no-confirm)
+(global-set-key (kbd "C-r") 'revert-buffer-no-confirm)
 
 ;; cua
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
-(define-key global-map "\C-\\" 'cua-set-rectangle-mark)
+(global-set-key (kbd "C-\\") 'cua-set-rectangle-mark)
 
 ;; redo
 (require 'redo+ nil t)

@@ -92,3 +92,7 @@
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
 (define-key global-map "\C-\\" 'cua-set-rectangle-mark)
+
+;; redo
+(require 'redo+ nil t)
+(global-set-key (kbd "M-z") 'redo)

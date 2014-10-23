@@ -8,6 +8,8 @@
 (define-key global-map "\M-s" 'replace-string)
 (setq scroll-step 1)
 (show-paren-mode t)
+(put 'set-goal-column 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
 ;; pacage repos: MELPA
 (require 'package)
@@ -65,7 +67,7 @@
 
 ;; anything
 (require 'anything-startup)
-(global-set-key (kbd "C-x b") 'anything-for-files)
+(global-set-key (kbd "C-x C-x") 'anything-for-files)
 (global-set-key (kbd "C-x C-y") 'anything-show-kill-ring)
 (global-set-key (kbd "C-x M-x") 'anything-M-x)
 

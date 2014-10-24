@@ -47,7 +47,6 @@
 
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
-(autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
@@ -55,12 +54,15 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(require 'ruby-electric nil t)
-(require 'ruby-block nil t)
+(require 'ruby-end)
+(require 'ruby-block)
 (setq ruby-block-highlight-toggle t)
 (defun ruby-mode-hooks ()
-  (ruby-electric-mode t)
-  (ruby-block-mode t))
+  (ruby-block-mode t)
+  (abbrev-mode 1)
+  (electric-pair-mode t)
+  (electric-indent-mode t)
+  (electric-layout-mode t))
 (add-hook 'ruby-mode-hook 'ruby-mode-hooks)
 
 ;; php
@@ -99,5 +101,5 @@
 (global-set-key (kbd "C-\\") 'cua-set-rectangle-mark)
 
 ;; redo
-(require 'redo+ nil t)
+(require 'redo+)
 (global-set-key (kbd "M-z") 'redo)

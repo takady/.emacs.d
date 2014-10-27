@@ -17,17 +17,14 @@
 (package-initialize)
 
 ;; blank highlight
-(defface my-face-b-1 '((t (:background "red"))) nil)
-(defface my-face-u-1 '((t (:background "red" :underline t))) nil)
-(defvar my-face-b-1 'my-face-b-1)
-(defvar my-face-u-1 'my-face-u-1)
-
+(defface my-face-u '((t (:background "red" :underline t))) nil)
+(defvar my-face-u 'my-face-u)
 (defadvice font-lock-mode (before my-font-lock-mode ())
- (font-lock-add-keywords
- major-mode
- '(("[　\t]" 0 my-face-b-1 append)
- ("[ \t]+$" 0 my-face-u-1 append)
- )))
+  (font-lock-add-keywords
+   major-mode
+   '(("[　\t]" 0 my-face-u append)
+     ("[ \t]+$" 0 my-face-u append)
+     )))
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
 
@@ -59,19 +56,12 @@
 (setq ruby-block-highlight-toggle t)
 (defun ruby-mode-hooks ()
   (ruby-block-mode t)
-  (abbrev-mode 1)
-  (electric-pair-mode t)
-  (electric-indent-mode t)
-  (electric-layout-mode t))
+  (abbrev-mode 1))
 (add-hook 'ruby-mode-hook 'ruby-mode-hooks)
 
-;; php
+;; php, haml, yaml
 (require 'php-mode)
-
-;; haml
 (require 'haml-mode)
-
-;; yaml
 (require 'yaml-mode)
 
 ;; anything

@@ -10,6 +10,7 @@
 (show-paren-mode t)
 (put 'set-goal-column 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(electric-pair-mode 1)
 
 ;; pacage repos: MELPA
 (require 'package)
@@ -17,7 +18,7 @@
 (package-initialize)
 
 ;; blank highlight
-(defface my-face-u '((t (:background "red" :underline t))) nil)
+(defface my-face-u '((t (:underline t))) nil)
 (defvar my-face-u 'my-face-u)
 (defadvice font-lock-mode (before my-font-lock-mode ())
   (font-lock-add-keywords

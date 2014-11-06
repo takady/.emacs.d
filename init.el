@@ -11,6 +11,7 @@
 (put 'set-goal-column 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (electric-pair-mode 1)
+(setq default-tab-width 2)
 
 ;; pacage repos: MELPA
 (require 'package)

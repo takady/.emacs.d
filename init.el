@@ -83,7 +83,7 @@
 
 ;; anything
 (require 'anything-startup)
-(global-set-key (kbd "C-x C-x") 'anything-for-files)
+(global-set-key (kbd "C-r") 'anything-for-files)
 (global-set-key (kbd "C-x C-y") 'anything-show-kill-ring)
 (global-set-key (kbd "C-x M-x") 'anything-M-x)
 
@@ -100,7 +100,7 @@
   (if (or force-reverting (not (buffer-modified-p)))
       (revert-buffer :ignore-auto :noconfirm)
     (error "The buffer has been modified")))
-(global-set-key (kbd "C-r") 'revert-buffer-no-confirm)
+(global-set-key (kbd "C-x C-r") 'revert-buffer-no-confirm)
 
 ;; cua
 (cua-mode t)

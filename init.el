@@ -34,10 +34,10 @@
 (defface hlline-face
   '((((class color)
       (background dark))
-     (:background "dark slate gray"))
+     (:background "color-232"))
     (((class color)
       (background light))
-     (:background  "#1a1a1a"))
+     (:background  "color-232"))
     (t
      ()))
   "*Face used by hl-line.")

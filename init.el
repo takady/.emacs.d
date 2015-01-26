@@ -19,7 +19,7 @@
 (package-initialize)
 
 ;; blank highlight
-(defface my-face-u '((t (:foreground "color-233" :underline t))) nil)
+(defface my-face-u '((t (:foreground "color-235" :underline t))) nil)
 (defvar my-face-u 'my-face-u)
 (defadvice font-lock-mode (before my-font-lock-mode ())
   (font-lock-add-keywords

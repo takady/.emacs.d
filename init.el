@@ -25,7 +25,7 @@
   (font-lock-add-keywords
    major-mode
    '(("[　\t]" 0 my-face-u append)
-     ("[ \t]+$" 0 my-face-u append)
+     ("[\t]+$" 0 my-face-u append)
      )))
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)

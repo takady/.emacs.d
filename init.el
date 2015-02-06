@@ -110,3 +110,7 @@
 ;; redo
 (require 'redo+)
 (global-set-key (kbd "M-z") 'redo)
+
+;; font color
+(custom-set-variables)
+(custom-set-faces '(font-lock-function-name-face ((t (:foreground "cyan")))))

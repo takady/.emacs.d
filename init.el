@@ -112,5 +112,22 @@
 (global-set-key (kbd "M-z") 'redo)
 
 ;; font color
-(custom-set-variables)
-(custom-set-faces '(font-lock-function-name-face ((t (:foreground "cyan")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "unspecified-bg" :foreground "color-254" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1 :width normal :foundry "default" :family "default"))))
+ '(font-lock-comment-face ((t (:foreground "brightblack"))))
+ '(font-lock-constant-face ((t (:foreground "magenta"))))
+ '(font-lock-function-name-face ((t (:foreground "cyan"))))
+ '(font-lock-keyword-face ((t (:foreground "red"))))
+ '(font-lock-string-face ((t (:foreground "color-94"))))
+ '(font-lock-type-face ((t (:foreground "green"))))
+ '(font-lock-variable-name-face ((t (:foreground "color-130")))))

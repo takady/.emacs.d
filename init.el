@@ -131,4 +131,4 @@
  '(font-lock-string-face ((t (:foreground "color-94"))))
  '(font-lock-type-face ((t (:foreground "green"))))
  '(font-lock-variable-name-face ((t (:foreground "color-130"))))
- '(region ((t (:background "color-17")))))
+ '(region ((t (:background "color-19")))))

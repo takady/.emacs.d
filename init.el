@@ -6,6 +6,9 @@
 (global-set-key (kbd "C-z") 'advertised-undo)
 (global-set-key (kbd "M-?") 'help-for-help)
 (global-set-key (kbd "M-s") 'replace-string)
+(global-set-key (kbd "C-x C-x") 'find-tag)
+(global-set-key (kbd "C-x C-b") 'pop-tag-mark)
+
 (setq scroll-step 1)
 (show-paren-mode t)
 (put 'set-goal-column 'disabled nil)

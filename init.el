@@ -1,3 +1,6 @@
+(require 'cask)
+(cask-initialize)
+
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (setq make-backup-files nil)
@@ -8,18 +11,12 @@
 (global-set-key (kbd "M-s") 'replace-string)
 (global-set-key (kbd "C-x C-x") 'find-tag)
 (global-set-key (kbd "C-x C-b") 'pop-tag-mark)
-
 (setq scroll-step 1)
 (show-paren-mode t)
 (put 'set-goal-column 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (electric-pair-mode 1)
 (setq default-tab-width 2)
-
-;; pacage repos: MELPA
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
 
 ;; blank highlight
 (defface my-face-u '((t (:foreground "color-235" :underline t))) nil)
@@ -65,8 +62,7 @@
   (abbrev-mode 1))
 (add-hook 'ruby-mode-hook 'ruby-mode-hooks)
 
-;; php, haml, yaml
-(require 'php-mode)
+;; haml, yaml
 (require 'haml-mode)
 (require 'yaml-mode)
 

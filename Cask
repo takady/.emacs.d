@@ -30,7 +30,6 @@
 (depends-on "auto-complete")
 (depends-on "go-mode")
 (depends-on "haml-mode")
-(depends-on "php-mode")
 (depends-on "popup")
 (depends-on "redo+")
 (depends-on "ruby-block")

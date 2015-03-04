@@ -7,6 +7,7 @@
 (setq auto-save-default nil)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-z") 'advertised-undo)
+(global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-?") 'help-for-help)
 (global-set-key (kbd "M-s") 'replace-string)
 (global-set-key (kbd "C-x C-x") 'find-tag)

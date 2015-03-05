@@ -36,3 +36,4 @@
 (depends-on "ruby-end")
 (depends-on "yaml-mode")
 (depends-on "go-autocomplete")
+(depends-on "php-mode")

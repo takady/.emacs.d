@@ -18,6 +18,7 @@
 (put 'downcase-region 'disabled nil)
 (electric-pair-mode 1)
 (setq default-tab-width 2)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; blank highlight
 (defface my-face-u '((t (:foreground "color-235" :underline t))) nil)

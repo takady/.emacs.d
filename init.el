@@ -20,6 +20,10 @@
 (setq default-tab-width 2)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; popwin
+(require 'popwin)
+(popwin-mode 1)
+
 ;; blank highlight
 (defface my-face-u '((t (:foreground "color-235" :underline t))) nil)
 (defvar my-face-u 'my-face-u)
@@ -78,7 +82,6 @@
 
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.jbuilder$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
@@ -88,11 +91,11 @@
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (require 'ruby-end)
 (require 'ruby-block)
-(setq ruby-block-highlight-toggle t)
-(defun ruby-mode-hooks ()
-  (ruby-block-mode t)
-  (abbrev-mode 1))
-(add-hook 'ruby-mode-hook 'ruby-mode-hooks)
+(add-hook 'ruby-mode-hook
+      '(lambda()
+        (ruby-block-mode t)
+        (abbrev-mode t)
+        (setq ruby-block-highlight-toggle t)))
 
 ;; haml, yaml
 (require 'haml-mode)
@@ -103,6 +106,7 @@
 (require 'go-autocomplete)
 (add-hook 'go-mode-hook
           '(lambda()
+            (flycheck-mode t)
             (setq c-basic-offset 4)
             (setq indent-tabs-mode t)
             (local-set-key (kbd "C-x C-x") 'godef-jump)

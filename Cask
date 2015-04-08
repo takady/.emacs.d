@@ -37,3 +37,4 @@
 (depends-on "yaml-mode")
 (depends-on "go-autocomplete")
 (depends-on "php-mode")
+(depends-on "markdown-mode")

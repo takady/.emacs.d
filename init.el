@@ -23,6 +23,10 @@
 ;; popwin
 (require 'popwin)
 (popwin-mode 1)
+(setq popwin:special-display-config
+ '(("*Gofmt Errors*" :noselect t)
+   ("*godoc*" :regexp t :height 30)
+   ("*Shell Command Output*" :noselect t)))
 
 ;; blank highlight
 (defface my-face-u '((t (:foreground "color-235" :underline t))) nil)

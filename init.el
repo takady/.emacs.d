@@ -97,6 +97,8 @@
 (require 'ruby-block)
 (add-hook 'ruby-mode-hook
       '(lambda()
+        (setq flycheck-checker 'ruby-rubylint)
+        (flycheck-mode t)
         (ruby-block-mode t)
         (abbrev-mode t)
         (setq ruby-block-highlight-toggle t)))

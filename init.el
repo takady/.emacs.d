@@ -26,6 +26,7 @@
 (setq popwin:special-display-config
  '(("*Gofmt Errors*" :noselect t)
    ("*godoc*" :regexp t :height 30)
+   ("helm" :regexp t :height 22)
    ("*Shell Command Output*" :noselect t)))
 
 ;; blank highlight
@@ -54,11 +55,11 @@
 (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
 
-;; anything
-(require 'anything-startup)
-(global-set-key (kbd "C-r") 'anything-for-files)
-(global-set-key (kbd "C-x C-y") 'anything-show-kill-ring)
-(global-set-key (kbd "C-x M-x") 'anything-M-x)
+;; helm
+(require 'helm-config)
+(helm-mode 1)
+(global-set-key (kbd "C-r") 'helm-for-files)
+(global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
 
 ;; auto-complete
 (require 'auto-complete-config)
@@ -135,6 +136,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background nil :foreground "color-254" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1 :width normal :foundry "default" :family "default"))))
+ '(font-lock-builtin-face ((t (:foreground "color-198"))))
  '(font-lock-comment-face ((t (:foreground "brightblack"))))
  '(font-lock-constant-face ((t (:foreground "color-165"))))
  '(font-lock-function-name-face ((t (:foreground "cyan"))))
@@ -142,4 +144,13 @@
  '(font-lock-string-face ((t (:foreground "color-94"))))
  '(font-lock-type-face ((t (:foreground "color-70"))))
  '(font-lock-variable-name-face ((t (:foreground "color-130"))))
+ '(helm-buffer-directory ((t (:background "LightGray" :foreground "color-162"))))
+ '(helm-buffer-process ((t (:foreground "color-240"))))
+ '(helm-candidate-number ((t (:background "color-247" :foreground "black"))))
+ '(helm-selection ((t (:background "color-19"))))
+ '(helm-source-header ((t (:background "color-237" :foreground "white" :weight bold :height 1.3 :family "Sans Serif"))))
+ '(helm-visible-mark ((t (:background "color-178"))))
+ '(highlight ((t (:background "color-34"))))
+ '(mode-line ((t (:background "brightblack" :foreground "white" :box (:line-width -1 :style released-button)))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "brightblack" :foreground "white" :box (:line-width -1 :color "grey75") :weight light))))
  '(region ((t (:background "color-19")))))

@@ -26,7 +26,6 @@
 (depends-on "web-mode")
 (depends-on "yasnippet")
 
-(depends-on "anything")
 (depends-on "auto-complete")
 (depends-on "go-mode")
 (depends-on "haml-mode")
@@ -38,3 +37,4 @@
 (depends-on "go-autocomplete")
 (depends-on "php-mode")
 (depends-on "markdown-mode")
+(depends-on "helm")

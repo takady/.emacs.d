@@ -12,6 +12,7 @@
 (global-set-key (kbd "M-s") 'replace-string)
 (global-set-key (kbd "C-c C-c") 'find-tag)
 (global-set-key (kbd "C-c C-b") 'pop-tag-mark)
+(global-hl-line-mode 1)
 (setq scroll-step 1)
 (show-paren-mode t)
 (put 'set-goal-column 'disabled nil)
@@ -40,20 +41,6 @@
      )))
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
-
-;; current line highlight
-(defface hlline-face
-  '((((class color)
-      (background dark))
-     (:background "color-232"))
-    (((class color)
-      (background light))
-     (:background  "color-232"))
-    (t
-     ()))
-  "*Face used by hl-line.")
-(setq hl-line-face 'hlline-face)
-(global-hl-line-mode)
 
 ;; helm
 (require 'helm-config)
@@ -150,7 +137,7 @@
  '(helm-selection ((t (:background "color-19"))))
  '(helm-source-header ((t (:background "color-237" :foreground "white" :weight bold :height 1.3 :family "Sans Serif"))))
  '(helm-visible-mark ((t (:background "color-178"))))
- '(highlight ((t (:background "color-34"))))
+ '(highlight ((t (:background "color-232"))))
  '(mode-line ((t (:background "brightblack" :foreground "white" :box (:line-width -1 :style released-button)))))
  '(mode-line-inactive ((t (:inherit mode-line :background "brightblack" :foreground "white" :box (:line-width -1 :color "grey75") :weight light))))
  '(region ((t (:background "color-19")))))

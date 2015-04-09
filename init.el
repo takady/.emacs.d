@@ -136,10 +136,10 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background nil :foreground "color-254" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1 :width normal :foundry "default" :family "default"))))
  '(font-lock-comment-face ((t (:foreground "brightblack"))))
- '(font-lock-constant-face ((t (:foreground "magenta"))))
+ '(font-lock-constant-face ((t (:foreground "color-165"))))
  '(font-lock-function-name-face ((t (:foreground "cyan"))))
- '(font-lock-keyword-face ((t (:foreground "red"))))
+ '(font-lock-keyword-face ((t (:foreground "color-161"))))
  '(font-lock-string-face ((t (:foreground "color-94"))))
- '(font-lock-type-face ((t (:foreground "green"))))
+ '(font-lock-type-face ((t (:foreground "color-70"))))
  '(font-lock-variable-name-face ((t (:foreground "color-130"))))
  '(region ((t (:background "color-19")))))

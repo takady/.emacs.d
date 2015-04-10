@@ -30,6 +30,10 @@
    ("helm" :regexp t :height 22)
    ("*Shell Command Output*" :noselect t)))
 
+;; powerline
+(require 'powerline)
+(powerline-default-theme)
+
 ;; blank highlight
 (defface my-face-u '((t (:foreground "color-235" :underline t))) nil)
 (defvar my-face-u 'my-face-u)

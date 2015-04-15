@@ -144,4 +144,7 @@
  '(highlight ((t (:background "color-232"))))
  '(mode-line ((t (:background "brightblack" :foreground "white" :box (:line-width -1 :style released-button)))))
  '(mode-line-inactive ((t (:inherit mode-line :background "brightblack" :foreground "white" :box (:line-width -1 :color "grey75") :weight light))))
+ '(powerline-active1 ((t (:inherit mode-line :background "color-232"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "color-238"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-236"))))
  '(region ((t (:background "color-19")))))

@@ -39,3 +39,4 @@
 (depends-on "markdown-mode")
 (depends-on "helm")
 (depends-on "powerline")
+(depends-on "slim-mode")

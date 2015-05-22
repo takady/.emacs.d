@@ -1,6 +1,7 @@
 (require 'cask)
 (cask-initialize)
 
+(setq ad-redefinition-action 'accept)
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (setq make-backup-files nil)

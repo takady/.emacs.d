@@ -13,7 +13,6 @@
 (global-set-key (kbd "M-s") 'replace-string)
 (global-set-key (kbd "C-c C-c") 'find-tag)
 (global-set-key (kbd "C-c C-b") 'pop-tag-mark)
-(global-hl-line-mode 1)
 (setq scroll-step 1)
 (show-paren-mode t)
 (put 'set-goal-column 'disabled nil)
@@ -95,10 +94,6 @@
         (ruby-block-mode t)
         (abbrev-mode t)
         (setq ruby-block-highlight-toggle t)))
-
-;; haml, yaml
-(require 'haml-mode)
-(require 'yaml-mode)
 
 ;; go-lang
 (require 'go-mode)

@@ -21,6 +21,10 @@
 (setq default-tab-width 2)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; linum-mode
+(global-linum-mode t)
+(setq linum-format "%4d | ")
+
 ;; popwin
 (require 'popwin)
 (popwin-mode 1)
@@ -151,3 +155,4 @@
  '(powerline-active2 ((t (:inherit mode-line :background "color-238"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-236"))))
  '(region ((t (:background "color-19")))))
+(put 'upcase-region 'disabled nil)

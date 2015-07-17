@@ -55,6 +55,7 @@
 (helm-mode 1)
 (global-set-key (kbd "C-r") 'helm-for-files)
 (global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
+(setq helm-buffer-max-length 50)
 
 ;; auto-complete
 (require 'auto-complete-config)
@@ -154,5 +155,8 @@
  '(powerline-active1 ((t (:inherit mode-line :background "color-232"))))
  '(powerline-active2 ((t (:inherit mode-line :background "color-238"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-236"))))
- '(region ((t (:background "color-19")))))
+ '(region ((t (:background "color-130" :foreground "white" :weight semi-bold))))
+ '(whitespace-newline ((t (:foreground "color-235"))))
+ '(whitespace-space ((t (:foreground "color-236"))))
+ '(whitespace-tab ((t (:foreground "magenta" :underline t)))))
 (put 'upcase-region 'disabled nil)

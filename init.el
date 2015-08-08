@@ -55,7 +55,8 @@
 (helm-mode 1)
 (global-set-key (kbd "C-r") 'helm-for-files)
 (global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
-(setq helm-buffer-max-length 50)
+(setq helm-buffer-max-length 35)
+(setq helm-truncate-lines t)
 
 ;; auto-complete
 (require 'auto-complete-config)

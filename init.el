@@ -7,6 +7,7 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (global-set-key (kbd "C-h") 'delete-backward-char)
+(global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-z") 'advertised-undo)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "M-?") 'help-for-help)

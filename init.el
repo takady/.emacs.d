@@ -23,7 +23,7 @@
 
 ;; linum-mode
 (global-linum-mode t)
-(setq linum-format "%4d | ")
+(setq linum-format "%4d ")
 
 ;; popwin
 (require 'popwin)

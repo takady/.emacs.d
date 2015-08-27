@@ -58,6 +58,8 @@
 (global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
 (setq helm-buffer-max-length 35)
 (setq helm-truncate-lines t)
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 
 ;; auto-complete
 (require 'auto-complete-config)

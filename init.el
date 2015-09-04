@@ -26,6 +26,12 @@
 (global-linum-mode t)
 (setq linum-format "%4d ")
 
+;; whitespace
+(global-whitespace-mode t)
+(setq whitespace-display-mappings
+			'((space-mark ?\u3000 [?\u25a1])
+				(tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
+
 ;; popwin
 (require 'popwin)
 (popwin-mode 1)
@@ -38,18 +44,6 @@
 ;; powerline
 (require 'powerline)
 (powerline-default-theme)
-
-;; blank highlight
-(defface my-face-u '((t (:foreground "color-235" :underline t))) nil)
-(defvar my-face-u 'my-face-u)
-(defadvice font-lock-mode (before my-font-lock-mode ())
-  (font-lock-add-keywords
-   major-mode
-   '(("[　\t]" 0 my-face-u append)
-     ("[\t]+$" 0 my-face-u append)
-     )))
-(ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
-(ad-activate 'font-lock-mode)
 
 ;; helm
 (require 'helm-config)
@@ -157,9 +151,10 @@
  '(mode-line-inactive ((t (:inherit mode-line :background "brightblack" :foreground "white" :box (:line-width -1 :color "grey75") :weight light))))
  '(powerline-active1 ((t (:inherit mode-line :background "color-232"))))
  '(powerline-active2 ((t (:inherit mode-line :background "color-238"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "color-232"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-236"))))
  '(region ((t (:background "color-130" :foreground "white" :weight semi-bold))))
  '(whitespace-newline ((t (:foreground "color-235"))))
  '(whitespace-space ((t (:foreground "color-236"))))
- '(whitespace-tab ((t (:foreground "magenta" :underline t)))))
+ '(whitespace-tab ((t (:foreground "color-234" :underline t)))))
 (put 'upcase-region 'disabled nil)

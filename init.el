@@ -36,10 +36,10 @@
 (require 'popwin)
 (popwin-mode 1)
 (setq popwin:special-display-config
- '(("*Gofmt Errors*" :noselect t)
-   ("*godoc*" :regexp t :height 30)
-   ("helm" :regexp t :height 22)
-   ("*Shell Command Output*" :noselect t)))
+			'(("*Gofmt Errors*" :noselect t)
+				("*godoc*" :regexp t :height 30)
+				("helm" :regexp t :height 22)
+				("*Shell Command Output*" :noselect t)))
 
 ;; powerline
 (require 'powerline)
@@ -64,10 +64,10 @@
 
 ;; reload
 (defun revert-buffer-no-confirm (&optional force-reverting)
-  (interactive "P")
-  (if (or force-reverting (not (buffer-modified-p)))
-      (revert-buffer :ignore-auto :noconfirm)
-    (error "The buffer has been modified")))
+	(interactive "P")
+	(if (or force-reverting (not (buffer-modified-p)))
+			(revert-buffer :ignore-auto :noconfirm)
+		(error "The buffer has been modified")))
 (global-set-key (kbd "C-x C-r") 'revert-buffer-no-confirm)
 
 ;; cua
@@ -91,25 +91,25 @@
 (require 'ruby-end)
 (require 'ruby-block)
 (add-hook 'ruby-mode-hook
-      '(lambda()
-        (setq flycheck-checker 'ruby-rubylint)
-        (flycheck-mode t)
-        (ruby-block-mode t)
-        (abbrev-mode t)
-        (setq ruby-block-highlight-toggle t)))
+					'(lambda()
+						 (setq flycheck-checker 'ruby-rubylint)
+						 (flycheck-mode t)
+						 (ruby-block-mode t)
+						 (abbrev-mode t)
+						 (setq ruby-block-highlight-toggle t)))
 
 ;; go-lang
 (require 'go-mode)
 (require 'go-autocomplete)
 (add-hook 'go-mode-hook
-          '(lambda()
-            (setq c-basic-offset 4)
-            (setq indent-tabs-mode t)
-            (local-set-key (kbd "C-x C-x") 'godef-jump)
-            (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
-            (local-set-key (kbd "C-c i") 'go-goto-imports)
-            (local-set-key (kbd "C-c d") 'godoc)
-            (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
+					'(lambda()
+						 (setq c-basic-offset 4)
+						 (setq indent-tabs-mode t)
+						 (local-set-key (kbd "C-x C-x") 'godef-jump)
+						 (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+						 (local-set-key (kbd "C-c i") 'go-goto-imports)
+						 (local-set-key (kbd "C-c d") 'godoc)
+						 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;; font color

@@ -154,6 +154,8 @@
  '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "color-232"))))
  '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-236"))))
  '(region ((t (:background "color-130" :foreground "white" :weight semi-bold))))
+ '(whitespace-indentation ((t (:background "color-234" :foreground "brightblack"))))
+ '(whitespace-line ((t nil)))
  '(whitespace-newline ((t (:foreground "color-235"))))
  '(whitespace-space ((t (:foreground "color-236"))))
  '(whitespace-tab ((t (:foreground "color-234" :underline t)))))

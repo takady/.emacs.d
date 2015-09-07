@@ -39,6 +39,8 @@
 			'(("*Gofmt Errors*" :noselect t)
 				("*godoc*" :regexp t :height 30)
 				("helm" :regexp t :height 22)
+				("magit" :regexp t :height 30)
+				("Faces" :regexp t :height 40)
 				("*Shell Command Output*" :noselect t)))
 
 ;; powerline
@@ -148,6 +150,7 @@
  '(helm-source-header ((t (:background "color-237" :foreground "white" :weight bold :height 1.3 :family "Sans Serif"))))
  '(helm-visible-mark ((t (:background "color-178"))))
  '(highlight ((t (:background "color-232"))))
+ '(magit-item-highlight ((t nil)))
  '(mode-line ((t (:background "brightblack" :foreground "white" :box (:line-width -1 :style released-button)))))
  '(mode-line-inactive ((t (:inherit mode-line :background "brightblack" :foreground "white" :box (:line-width -1 :color "grey75") :weight light))))
  '(powerline-active1 ((t (:inherit mode-line :background "color-232"))))

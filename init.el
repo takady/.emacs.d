@@ -152,7 +152,7 @@
  '(powerline-active1 ((t (:inherit mode-line :background "color-232"))))
  '(powerline-active2 ((t (:inherit mode-line :background "color-238"))))
  '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "color-232"))))
- '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-236"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "color-238"))))
  '(region ((t (:background "color-130" :foreground "white" :weight semi-bold))))
  '(whitespace-indentation ((t (:background "color-234" :foreground "brightblack"))))
  '(whitespace-line ((t nil)))

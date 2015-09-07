@@ -125,13 +125,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "color-233" :foreground "color-254" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1 :width normal :foundry "default" :family "default"))))
- '(diff-added ((t (:inherit diff-changed :background "#ddffdd" :foreground "black"))))
+ '(diff-added ((t (:inherit diff-changed :foreground "green"))))
  '(diff-header ((t (:background "grey80" :foreground "black"))))
  '(diff-indicator-added ((t (:inherit diff-added :foreground "black"))))
  '(diff-indicator-removed ((t (:inherit diff-removed :foreground "black"))))
  '(diff-refine-added ((t (:inherit diff-refine-change :background "#aaffaa" :foreground "black"))))
  '(diff-refine-changed ((t (:background "#ffff55" :foreground "black"))))
- '(diff-removed ((t (:inherit diff-changed :background "#ffdddd" :foreground "black"))))
+ '(diff-removed ((t (:inherit diff-changed :foreground "red"))))
  '(error ((t (:foreground "brightred" :weight bold))))
  '(font-lock-builtin-face ((t (:foreground "color-198"))))
  '(font-lock-comment-face ((t (:foreground "brightblack"))))

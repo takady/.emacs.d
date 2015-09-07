@@ -132,6 +132,7 @@
  '(diff-refine-added ((t (:inherit diff-refine-change :background "#aaffaa" :foreground "black"))))
  '(diff-refine-changed ((t (:background "#ffff55" :foreground "black"))))
  '(diff-removed ((t (:inherit diff-changed :background "#ffdddd" :foreground "black"))))
+ '(error ((t (:foreground "brightred" :weight bold))))
  '(font-lock-builtin-face ((t (:foreground "color-198"))))
  '(font-lock-comment-face ((t (:foreground "brightblack"))))
  '(font-lock-constant-face ((t (:foreground "color-165"))))

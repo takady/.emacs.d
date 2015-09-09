@@ -22,6 +22,10 @@
 (setq default-tab-width 2)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; magit
+(setq magit-auto-revert-mode nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 ;; linum-mode
 (global-linum-mode t)
 (setq linum-format "%4d ")
@@ -39,7 +43,7 @@
 			'(("*Gofmt Errors*" :noselect t)
 				("*godoc*" :regexp t :height 30)
 				("helm" :regexp t :height 22)
-				("magit" :regexp t :height 30)
+				("magit" :regexp t :height 40)
 				("Faces" :regexp t :height 40)
 				("*Shell Command Output*" :noselect t)))
 
@@ -128,7 +132,8 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "color-233" :foreground "color-254" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1 :width normal :foundry "default" :family "default"))))
  '(diff-added ((t (:inherit diff-changed :foreground "green"))))
- '(diff-header ((t (:background "grey80" :foreground "black"))))
+ '(diff-file-header ((t (:background "color-242" :foreground "black" :weight bold))))
+ '(diff-header ((t nil)))
  '(diff-indicator-added ((t (:inherit diff-added :foreground "black"))))
  '(diff-indicator-removed ((t (:inherit diff-removed :foreground "black"))))
  '(diff-refine-added ((t (:inherit diff-refine-change :background "#aaffaa" :foreground "black"))))

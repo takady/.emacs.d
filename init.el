@@ -7,10 +7,7 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-z") 'advertised-undo)
-(global-set-key (kbd "M-g") 'goto-line)
-(global-set-key (kbd "M-?") 'help-for-help)
 (global-set-key (kbd "M-s") 'replace-string)
 (global-unset-key "\C-j")
 (global-set-key (kbd "C-j C-j") 'find-tag)
@@ -64,19 +61,6 @@
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "C-n" 'ac-next)
 (define-key ac-menu-map "C-p" 'ac-previous)
-
-;; reload
-(defun revert-buffer-no-confirm (&optional force-reverting)
-	(interactive "P")
-	(if (or force-reverting (not (buffer-modified-p)))
-			(revert-buffer :ignore-auto :noconfirm)
-		(error "The buffer has been modified")))
-(global-set-key (kbd "C-x C-r") 'revert-buffer-no-confirm)
-
-;; cua
-(cua-mode t)
-(setq cua-enable-cua-keys nil)
-(global-set-key (kbd "C-\\") 'cua-set-rectangle-mark)
 
 ;; redo
 (require 'redo+)

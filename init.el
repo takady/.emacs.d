@@ -62,6 +62,11 @@
 (define-key ac-menu-map "C-n" 'ac-next)
 (define-key ac-menu-map "C-p" 'ac-previous)
 
+;; cua
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+(global-set-key (kbd "C-\\") 'cua-set-rectangle-mark)
+
 ;; redo
 (require 'redo+)
 (global-set-key (kbd "M-z") 'redo)
@@ -79,8 +84,6 @@
 (require 'ruby-block)
 (add-hook 'ruby-mode-hook
 					'(lambda()
-						 (setq flycheck-checker 'ruby-rubylint)
-						 (flycheck-mode t)
 						 (ruby-block-mode t)
 						 (abbrev-mode t)
 						 (setq ruby-block-highlight-toggle t)))

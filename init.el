@@ -1,3 +1,9 @@
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'cask)
 (cask-initialize)
 
@@ -101,6 +107,10 @@
 						 (local-set-key (kbd "C-c d") 'godoc)
 						 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
 (add-hook 'before-save-hook 'gofmt-before-save)
+
+;; Dockerfile
+(autoload 'dockerfile-mode "dockerfile-mode" nil t)
+(add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-mode))
 
 ;; font color
 (custom-set-variables

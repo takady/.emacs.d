@@ -40,3 +40,4 @@
 (depends-on "helm")
 (depends-on "slim-mode")
 (depends-on "scss-mode")
+(depends-on "dockerfile-mode")

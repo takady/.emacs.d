@@ -26,9 +26,8 @@
 (setq default-tab-width 2)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; magit
-(setq magit-auto-revert-mode nil)
-(setq magit-last-seen-setup-instructions "1.4.0")
+(require 'git-commit)
+(global-git-commit-mode t)
 
 ;; linum-mode
 (global-linum-mode t)

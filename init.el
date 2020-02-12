@@ -72,26 +72,10 @@
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-\\") 'cua-set-rectangle-mark)
 
-;; redo
-(require 'redo+)
-(global-set-key (kbd "M-z") 'redo)
-
-;; ruby
-(setq ruby-insert-encoding-magic-comment nil)
-(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.jbuilder$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(require 'ruby-end)
-(require 'ruby-block)
-(add-hook 'ruby-mode-hook
-					'(lambda()
-						 (ruby-block-mode t)
-						 (abbrev-mode t)
-						 (setq ruby-block-highlight-toggle t)))
+;; undo
+(require 'undo-tree)
+(global-undo-tree-mode t)
+(global-set-key (kbd "M-z") 'undo-tree-redo)
 
 ;; go-lang
 (require 'go-mode)
